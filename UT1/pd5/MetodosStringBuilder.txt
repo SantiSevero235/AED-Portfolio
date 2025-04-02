@@ -1,0 +1,31 @@
+● Todos los constructores
+Si no tiene parametros, este creará un generador de cadenas vacías con una capacidad de 16 (16 elementos vacíos).
+
+Si tiene un parametro (int): Creará un generador de cadenas vacías con la capacidad inicial especificada.
+
+Si tiene un parametro (string): Va a crear un generador de cadenas cuyo valor se inicializa mediante la cadena especificada,
+además de 16 elementos vacíos adicionales que van a la zaga de la cadena.
+
+● setLength
+Se encarga de establecer la longitud de la secuencia de caracteres. Si es menor que a la longitud del string, los últimos caracteres
+de la secuencia de caracteres se truncan, si es mayor se agregan caracteres nulos al final de la secuencia de caracteres.
+
+● ensureCapacity
+Garantiza que la capacidad sea al menos igual al mínimo que se haya especificado.
+
+● append
+Anexa el argumento a este generador de cadenas. Los datos se convierten en una cadena antes de que tenga lugar la
+operación de anexar.
+
+● insert
+Inserta el segundo argumento en el generador de cadenas. El primer argumento entero indica el índice antes del cual
+se van a insertar los datos. Los datos se convierten en una cadena antes de que se realice la operación de inserción.
+
+● delete
+Elimina la subsecuencia de principio a fin-1 (inclusive) en la secuencia de caracteres.
+
+● deleteCharAt
+Elimina el carácter ubicado en la posicion del parametro que sea indicado.
+
+● reverse
+Invertirá la secuencia de caracteres en este generador de cadenas.

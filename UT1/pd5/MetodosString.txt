@@ -1,0 +1,63 @@
+● substring
+Al pasarle dos valores, este devuelve una nueva cadena que es una subcadena de esta cadena. La subcadena
+comienza en el índice especificado y se extiende hasta el carácter en el índice - 1.
+
+Cuando se le pasa un solo valor: Devuelve una nueva cadena que es una subcadena de esta cadena.
+El argumento entero especifica el índice del primer carácter. Aquí, la subcadena devuelta
+se extiende hasta el final de la cadena original.
+
+● split
+Este busca una coincidencia especificada por el argumento String (que contendrá una expresión regular) y
+divide esta cadena en una matriz de cadenas en consecuencia. El argumento entero opcional especifica el
+tamaño máximo de la matriz devuelta.
+
+● subSequence
+Devuelve una nueva secuencia de caracteres construida desde el índice hasta - 1.
+
+● trim
+Devuelve una copia de esta cadena con los espacios en blanco iniciales y finales quitados.
+
+● toLowerCase
+Devuelve una copia de esta cadena convertida a letras minúsculas.
+
+● toUpperCase
+Devuelve una copia de esta cadena convertida a letras mayúsculas.
+
+● indexOf
+Con un solo parametro (caracter): Este devuelve el índice de la primera aparición del carácter especificado
+
+Con dos parametros (caracter): Este devuelve el índice de la primera aparición del carácter especificado,
+buscando hacia adelante desde el índice especificado.
+
+Con un solo parametro (string): Este devuelve el índice de la primera aparición de la subcadena especificada
+
+Con dos parametros (string): Este devuelve el índice de la primera aparición de la subcadena especificada,
+buscando hacia adelante desde el índice especificado.
+
+
+
+● lastIndexOf
+Con un solo parametro (caracter): Este devuelve el índice de la última aparición del carácter especificado
+
+Con dos parametros (caracter): Este devuelve el índice de la última aparición del que se haya especificado,
+buscando hacia atrás desde el índice especificado.
+
+Con un solo parametro (string): Devolverá el índice de la última aparición de la subcadena especificada.
+
+Con dos parametros (string): Devuelve el índice de la última aparición de la subcadena especificada,
+buscando hacia atrás desde el índice especificado.
+
+
+● contains
+Devolverá True si la cadena contiene la secuencia de caracteres especificada.
+
+● replace
+Devolverá una nueva cadena resultante de reemplazar todas las apariciones de un caracter en esta cadena por uno nuevo.
+Reemplaza cada subcadena de esta cadena que coincide con la secuencia de destino literal con la secuencia
+de reemplazo literal especificada.
+
+● replaceAll
+Reemplaza cada subcadena de esta cadena que coincide con la expresión regular dada con el reemplazo dado.
+
+● replaceFirst
+Reemplaza cada subcadena de esta cadena que coincide con la expresión regular dada con el reemplazo dado.

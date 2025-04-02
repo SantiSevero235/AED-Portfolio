@@ -1,0 +1,7 @@
+LN: El método palabrasComunes toma dos arreglos de cadenas (palabras1 y palabras2) como parámetros donde 
+cada arreglo contiene un conjunto de palabras que pueden formar frases.
+Se crea una lista auxiliar llamada arResultado que almacenará las palabras que sean comunes a ambos arreglos.
+El método recorre cada palabra del primer arreglo (palabras1) y la compara con cada palabra del segundo arreglo (palabras2), 
+en el caso de que se encuentre una coincidencia, es decir, si ambas palabras son iguales, esa palabra se añade a la lista arResultado 
+y se detiene la comparación para esa palabra, continuando con la siguiente palabra de palabras1.
+Finalmente, el método convierte la lista arResultado en un arreglo y lo devuelve como resultado.

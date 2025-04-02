@@ -1,0 +1,26 @@
+LN: La multiplicación de vectores en este contexto se trata de una operación matemática en la que dos vectores del mismo tamaño se combinan para producir un único número. Se lo obtiene multiplicando cada elemento del primer vector por su correspondiente en el segundo vector y sumando los resultados. Se hace primero una función booleana "puedeMultiplicar" que verifica que ambos vectores que van por parámetro si tienen el mismo tamaño o no, ya que solo se multiplican si son del mismo tamaño.
+La función de multiplicar los vectores usamos el boolean "puedeMultiplicar" para comprobar que se puedan multiplicar ambos vectores, se inicializa una variable llamada resultado. Se recorren ambos vectores y multiplica los elementos en la misma posición, al final suma los productos y devolverá el resultado.
+
+Condiciones necesarias:
+
+Los dos vectores deben tener la misma cantidad de elementos.
+
+Si un vector tiene más elementos que el otro, no se puede realizar la multiplicación.
+
+Cada elemento del primer vector se debe multiplicar con el elemento correspondiente del segundo vector y así sucesivamente.
+
+No se pueden mezclar posiciones ni usar valores que no correspondan directamente.
+
+El resultado será un único número.
+
+Deben ser vectores de números enteros en este caso (según la implementación en Java).
+
+
+Casos especiales:
+
+Si los vectores son de diferente tamaño: No se pueden multiplicar y se debe indicar un error.
+
+Si los vectores contienen solo ceros: El resultado será 0.
+
+Si los vectores están vacíos: La operación no tiene sentido, por lo que se debe manejar como un error.
+
