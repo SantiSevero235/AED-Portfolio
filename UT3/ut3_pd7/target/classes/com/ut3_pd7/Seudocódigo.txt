@@ -1,0 +1,60 @@
+Unión
+
+LN: Toma otra lista como parámetro y devuelve una lista nueva que sería la unión de las dos listas sin que se repitan los elementos. El método va a recorrer cada elemento de la lista original y lo insertará en una nueva lista auxiliar, luego recorrerá cada elemento de la otra lista y lo insertará en la lista auxiliar solo si no se encuentra en la lista original.
+
+Precondiciones:
+- El método debe recibir como parámetro otra lista del mismo tipo que la lista actual.
+
+Postcondiciones:
+- El método devuelve una nueva lista que es la unión de las dos listas sin elementos repetidos.
+
+Seudocódigo:
+Union(otraLista: Lista)
+COM
+    listaAux = nueva Lista
+    aux = primero
+
+    mientras aux <> nulo hacer O(N)
+        listaAux.insertar(nuevo Nodo(aux.Etiqueta, aux.Dato)) O(1)
+        aux <- aux.Siguiente O(1)
+    fin mientras
+
+    aux1 <- otraLista.primero
+
+    mientras aux1 <> nulo hacer  O(N)
+        si buscar(aux1.Etiqueta) == nulo entonces  O(1)
+            listaAux.insertar(nuevo Nodo(aux1.Etiqueta, aux1.Dato)) O(1)
+        fin si
+        aux1 <- aux1.getSiguiente() O(1)
+    fin mientras
+
+    devolver listaAux
+FIN
+
+Orden: O(N)
+
+Intersección
+
+LN: Este método devolverá una nueva lista que contendrá los elementos que estén en ambas listas. Recorre cada elemento de la lista que haya sido pasada como argumento y comprobará si cada elemento está presente en la lista actual. En caso de estarlo, agregará ese elemento a la lista auxiliar que se va a devolver.
+
+Precondiciones:
+- El método debe recibir como parámetro otra lista del mismo tipo que la lista actual.
+
+Postcondiciones:
+- Devolverá una nueva lista que contendrá los elementos que están en ambas listas.
+
+Seudocódigo:
+Interseccion(otraLista: Lista)
+COM
+    listaAux <- nueva Lista O(1)
+    aux1 <- otraLista.primero 0(1)
+    mientras aux1 <> nulo:  O(N)
+        si buscar(aux1.Etiqueta) <> nulo:  O(1)
+            listaAux.insertar(nuevo Nodo(aux1.Etiqueta, aux1.Dato)) 0(1)
+	fin si
+	aux1 <- aux1.siguiente() O(1)
+    fin mientras
+    devolver listaAux O(1)
+FIN
+
+Orden: O(N)
