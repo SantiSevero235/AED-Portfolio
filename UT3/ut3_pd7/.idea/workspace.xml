@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a0d86462-091c-4c49-9589-86f813248960" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../pd7/src/main/java/uy/edu/ucu/aed/pd7/Alumno.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pd7/src/main/java/uy/edu/ucu/aed/pd7/Conjunto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pd7/src/main/java/uy/edu/ucu/aed/pd7/IConjunto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pd7/src/main/java/uy/edu/ucu/aed/pd7/ILista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pd7/src/main/java/uy/edu/ucu/aed/pd7/Lista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pd7/src/main/java/uy/edu/ucu/aed/pd7/utils/ManejadorArchivosGenerico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../UT4/PD2/src/main/java/uy/edu/ucu/aed/pd2/Ej3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../UT4/PD2/src/main/java/uy/edu/ucu/aed/pd2/TArbolBB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../UT4/PD2/src/main/java/uy/edu/ucu/aed/pd2/TElementoAB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ut3_pd3/target/classes/com/ut3/pd3/ILista.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ut3_pd3/target/classes/com/ut3/pd3/ILista.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ut3_pd3/target/classes/com/ut3/pd3/INodo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ut3_pd3/target/classes/com/ut3/pd3/INodo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ut3_pd3/target/classes/com/ut3/pd3/Lista.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ut3_pd3/target/classes/com/ut3/pd3/Lista.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ut3_pd3/target/classes/com/ut3/pd3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ut3_pd3/target/classes/com/ut3/pd3/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ut3_pd3/target/classes/com/ut3/pd3/Nodo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ut3_pd3/target/classes/com/ut3/pd3/Nodo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ut04-equipo-20" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "SantiSevero235"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/SantiSevero235/AED-Portfolio.git",
+    "accountId": "2eb95e8f-7863-4a6b-be15-2c584fda179e"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2x7Kp7ZfGOqNSe34HrZ9kIqvbhR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/santi/Downloads/AED/AED 2025/AED-Portfolio/UT3/ut3_pd7"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a0d86462-091c-4c49-9589-86f813248960" name="Changes" comment="" />
+      <created>1747283851963</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747283851963</updated>
+    </task>
+    <servers />
+  </component>
+</project>
