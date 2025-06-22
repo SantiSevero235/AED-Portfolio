@@ -1,0 +1,13 @@
+Investigar,Planificar,1
+Planificar,Diseñar,1
+Revisar,Diseñar,1
+Diseñar,Implementar,1
+Analizar,Implementar,1
+Analizar,Probar,1
+Implementar,Documentar,1
+Implementar,Presentar,1
+Probar,Presentar,1
+Presentar,Entregar,1
+Documentar,Revisar Documentos,1
+Corregir,Revisar Documentos,1
+Revisar Documentos,Entregar,1

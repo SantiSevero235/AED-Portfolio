@@ -1,0 +1,30 @@
+@Override
+    public Comparable obtenerExcentricidad(Comparable etiquetaVertice) {
+        Double[][] matrizCostos = floyd();
+        List<Comparable> keys = new ArrayList<>(vertices.keySet());
+        int index = keys.indexOf(etiquetaVertice);
+        double maxCost = Double.MIN_VALUE;
+
+        for (int j = 0; j < matrizCostos.length; j++) {
+            if (matrizCostos[index][j] != Double.MAX_VALUE) {
+                maxCost = Math.max(maxCost, matrizCostos[index][j]);
+            }
+        }
+        return maxCost == Double.MIN_VALUE ? -1 : (int) maxCost;
+    }
+
+@Override
+    public Comparable centroDelGrafo() {
+        double minEccentricity = Double.MAX_VALUE;
+        Comparable center = null;
+
+        for (Comparable etiquetaVertice : vertices.keySet()) {
+            int eccentricity = (int) obtenerExcentricidad(etiquetaVertice);
+            if (eccentricity != -1 && eccentricity < minEccentricity) {
+                minEccentricity = eccentricity;
+                center = etiquetaVertice;
+            }
+        }
+
+        return center;
+    }

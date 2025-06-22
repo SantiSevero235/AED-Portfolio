@@ -1,0 +1,16 @@
+@Override
+    public Double[][] floyd() {
+        Double[][] matrizCostos = UtilGrafos.obtenerMatrizCostos(vertices);
+        int numVertices = matrizCostos.length;
+        for (int k = 0; k < numVertices; k++) {
+            for (int i = 0; i < numVertices; i++) {
+                for (int j = 0; j < numVertices; j++) {
+                    if (matrizCostos[i][k] != Double.MAX_VALUE && matrizCostos[k][j] != Double.MAX_VALUE) {
+                        matrizCostos[i][j] = Math.min(matrizCostos[i][j], matrizCostos[i][k] + matrizCostos[k][j]);
+                    }
+                }
+            }
+        }
+
+        return matrizCostos;
+    }
