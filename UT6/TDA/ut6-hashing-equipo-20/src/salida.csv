@@ -1,0 +1,6 @@
+algoritmo,tiempo,memoria
+MedicionBuscarLinkedList,16515904600,937264
+MedicionBuscarArrayList,9903307800,937274
+MedicionBuscarTrie,7441700,10450671
+MedicionBuscarHashMap,3931400,1328896
+MedicionBuscarTreeMap,16942900,1328898

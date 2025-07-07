@@ -1,0 +1,6 @@
+estructura,tiempo,memoria
+MedicionPredecirLinkedList,173999900,937264
+MedicionPredecirArrayList,135216800,937274
+MedicionPredecirHashMap,527520800,1328896
+MedicionPredecirTreeMap,368101300,1328898
+MedicionPredecirTrie,13933100,10450671
