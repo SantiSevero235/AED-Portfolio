@@ -1,0 +1,3 @@
+Resultado 1: Grados: 2, Tipo de Parentesco: consanguinidad
+Resultado 2: Grados: -1, Tipo de Parentesco: desconocido
+Resultado 3: Grados: 3, Tipo de Parentesco: político
