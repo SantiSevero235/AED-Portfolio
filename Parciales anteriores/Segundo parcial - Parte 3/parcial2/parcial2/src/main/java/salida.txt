@@ -1,0 +1,24 @@
+Conexiones:
+CS10 a CS60: true
+CS30 a CS80: false
+CS80 a CS90: true
+
+Mayor medición:
+Valor: 999.6713884961163
+Fecha: 1700519108
+Conexiones:
+CS10 a CS60: true
+CS30 a CS80: false
+CS80 a CS90: true
+
+Mayor medición:
+Valor: 999.6713884961163
+Fecha: 1700519108
+Conexiones:
+CS10 a CS60: true
+CS30 a CS80: false
+CS80 a CS90: true
+
+Mayor medición:
+Valor: 999.6713884961163
+Fecha: 1700519108
