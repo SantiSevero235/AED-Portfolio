@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 public class UtilGrafos {
 
-    public static Double[][] obtenerMatrizCostos(Map<Comparable, TVertice> vertices) {
+    public static Double[][] obtenerMatrizCostos(Map<Comparable, IVertice> vertices) {
         int cantidadVertices = vertices.size();
         Double[][] matrizCostos = new Double[cantidadVertices][cantidadVertices];
 
@@ -33,12 +33,12 @@ public class UtilGrafos {
         while (i < cantidadVertices) {
             int j = 0;
             while (j < cantidadVertices) {
-                TVertice elemVerticeI = vertices.get(VerticesIArr[i]);
-                TVertice elemVerticeJ = vertices.get(VerticesJArr[j]);
+                IVertice elemVerticeI = vertices.get(VerticesIArr[i]);
+                IVertice elemVerticeJ = vertices.get(VerticesJArr[j]);
 
                 if (!elemVerticeI.getEtiqueta().equals(elemVerticeJ.getEtiqueta())) {
-                    TVertice verticeI = (TVertice) elemVerticeI;
-                    TVertice verticeJ = (TVertice) elemVerticeJ;
+                    IVertice verticeI = elemVerticeI;
+                    IVertice verticeJ = elemVerticeJ;
                     Double costoAdyacencia = verticeI.obtenerCostoAdyacencia(verticeJ);
                     matrizCostos[i][j] = costoAdyacencia;
                 }
@@ -49,7 +49,7 @@ public class UtilGrafos {
         return matrizCostos;
     }
 
-    public static void imprimirMatriz(Comparable[][] matriz, Map<Comparable, TVertice> vertices) {
+    public static void imprimirMatriz(Comparable[][] matriz, Map<Comparable, IVertice> vertices) {
         Object[] etiquetas = vertices.keySet().toArray();
         System.out.print("  ");
         for (int i = 0; i < matriz.length; i++) {
@@ -69,7 +69,7 @@ public class UtilGrafos {
         }
     }
     
-    public static void imprimirMatrizCsv(Comparable[][] matriz, Map<Comparable, TVertice> vertices) {
+    public static void imprimirMatrizCsv(Comparable[][] matriz, Map<Comparable, IVertice> vertices) {
         Object[] etiquetas = vertices.keySet().toArray();
         System.out.print("Vertice/Vertice,");
         for (int i = 0; i < matriz.length; i++) {
@@ -95,7 +95,7 @@ public class UtilGrafos {
         }
     }
 
-    public static void imprimirMatrizMejorado(Comparable[][] matriz, Map<Comparable, TVertice> vertices, String titulo) {
+    public static void imprimirMatrizMejorado(Comparable[][] matriz, Map<Comparable, IVertice> vertices, String titulo) {
         if (vertices != null && matriz.length == vertices.keySet().size()) {
 
             Comparable[] etiquetas = vertices.keySet().toArray(new Comparable[vertices.keySet().size()]);
@@ -203,8 +203,8 @@ public class UtilGrafos {
         String[] vertices = ManejadorArchivosGenerico.leerArchivo(nomArchVert, ignoreHeader);
         String[] aristas = ManejadorArchivosGenerico.leerArchivo(nomArchAdy, ignoreHeader);
 
-        List<TVertice> verticesList = new ArrayList<TVertice>(vertices.length);
-        List<TArista> aristasList = new ArrayList<TArista>(aristas.length);
+        List<IVertice> verticesList = new ArrayList<>(vertices.length);
+        List<IArista> aristasList = new ArrayList<>(aristas.length);
 
         for (String verticeString : vertices) {
             if ((verticeString != null) && (verticeString.trim() != "")) {

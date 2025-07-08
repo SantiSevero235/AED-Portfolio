@@ -1,6 +1,10 @@
 package uy.edu.ucu.aed;
-
 import java.util.Collection;
-import java.util.Map;
 
-public interface IGrafoNoDirigido { }
+public interface IGrafoNoDirigido {
+
+    public Collection <IVertice> bea();
+    public Collection <IVertice> bea(Comparable etiquetaOrigen);
+    public TGrafoNoDirigido Prim();
+    public TGrafoNoDirigido Kruskal();
+}

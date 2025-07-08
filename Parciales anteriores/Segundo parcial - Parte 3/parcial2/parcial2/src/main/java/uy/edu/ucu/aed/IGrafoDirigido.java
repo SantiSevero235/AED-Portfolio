@@ -1,6 +1,5 @@
 package uy.edu.ucu.aed;
 
-import java.util.Collection;
 import java.util.Map;
 
 public interface IGrafoDirigido {
@@ -54,7 +53,7 @@ public interface IGrafoDirigido {
      * @param etiquetaOrigen
      * @return True si se pudo insertar la arista, false en caso contrario
      */
-    boolean insertarArista(TArista arista);
+    boolean insertarArista(IArista arista);
 
     /**
      * Metodo encargado de insertar un vertice en el grafo.
@@ -65,11 +64,11 @@ public interface IGrafoDirigido {
      * @param unaEtiqueta Etiqueta del vertice a ingresar.
      * @return True si se pudo insertar el vertice, false en caso contrario
      */
-    boolean insertarVertice(TVertice vertice);
+    boolean insertarVertice(IVertice vertice);
 
  
 
-    public Map<Comparable, TVertice> getVertices();
+    public Map<Comparable, IVertice> getVertices();
 
     public void desvisitarVertices();
 

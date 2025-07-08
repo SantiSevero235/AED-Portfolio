@@ -5,7 +5,7 @@ public class TAdyacencia implements IAdyacencia {
 
     private Comparable etiqueta;
     private double costo;
-    private TVertice destino;
+    private IVertice destino;
     
     @Override
     public Comparable getEtiqueta() {
@@ -18,11 +18,11 @@ public class TAdyacencia implements IAdyacencia {
     }
 
     @Override
-    public TVertice getDestino() {
+    public IVertice getDestino() {
         return destino;
     }
 
-    public TAdyacencia(double costo, TVertice destino) {
+    public TAdyacencia(double costo, IVertice destino) {
         this.etiqueta = destino.getEtiqueta();
         this.costo = costo;
         this.destino = destino;

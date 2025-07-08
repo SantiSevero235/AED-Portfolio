@@ -1,62 +1,48 @@
 package uy.edu.ucu.aed;
 
 import java.util.LinkedList;
+import java.util.List;
 
-public class Parcial2
-{    
+public class Parcial2 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args)
-    {
-        // 1 - Cargar el Grafo
-        TGrafoRedDatos grafo = UtilGrafos.cargarGrafo("src/main/dispositivos.txt", "src/main/conexiones.txt", false, TGrafoRedDatos.class);
+    public static void main(String[] args) {
+        SistemaTransporte sistema = new SistemaTransporte();
+        sistema.agregarRuta("A", "B", 5);
+        sistema.agregarRuta("A", "C", 10);
+        sistema.agregarRuta("B", "C", 2);
+        sistema.agregarRuta("B", "D", 4);
+        sistema.agregarRuta("C", "D", 1);
 
-        // 2 - Verificar que los componentes se encuentren conectados
-        boolean conectados = grafo.conectados("CS10","CS60");
-        boolean conectados2 = grafo.conectados("CS30","CS80");
-        boolean conectados3 = grafo.conectados("CS80","CS90");
+        StringBuilder salida = new StringBuilder();
 
-        System.out.println(conectados);
-        System.out.println(conectados2);
-        System.out.println(conectados3);
-        
-        // 3 - Leer y cargar archivo mediciones.txt
-        TDato[] datos = Parcial2.cargarMediciones("src/main/mediciones.txt");
-        
-        // 4 - Obtener dato de mayor medicion.
-        TMedidor medidor = new TMedidor();
-        TDato mayorMedicion = medidor.obtenerMayorMedicion(datos);
-
-        // 5 - Emitir archivo de salida salida.txt
-        LinkedList<String> lineasSalida = new LinkedList<>();
-
-        lineasSalida.add("Conexiones:");
-        lineasSalida.add("CS10 a CS60: " + conectados);
-        lineasSalida.add("CS30 a CS80: " + conectados2);
-        lineasSalida.add("CS80 a CS90: " + conectados3);
-        lineasSalida.add("");
-
-        if (mayorMedicion != null) {
-            lineasSalida.add("Mayor medición:");
-            lineasSalida.add("Valor: " + mayorMedicion.getValor());
-            lineasSalida.add("Fecha: " + mayorMedicion.getFecha());
+        int tiempoMinimo = sistema.consultaTiempoMinimo("A", "D");
+        if (tiempoMinimo == -1) {
+            salida.append("No existe un camino entre A y D.\n");
         } else {
-            lineasSalida.add("No se encontraron mediciones.");
+            salida.append("Tiempo mínimo entre A y D: ").append(tiempoMinimo).append(" minutos\n");
         }
 
-        ManejadorArchivosGenerico.escribirArchivo("src/main/java/salida.txt", lineasSalida.toArray(new String[0]));
-    }
-
-    private static TDato[] cargarMediciones(String rutaAlArchivo) {
-        String[] lineas = ManejadorArchivosGenerico.leerArchivo(rutaAlArchivo, false);
-        
-        TDato[] mediciones = new TDato[lineas.length];
-        for (int i = 0; i < lineas.length; i++) {
-            String[] datos = lineas[i].split(",");
-            mediciones[i] = new TDato(Double.parseDouble(datos[1]), Integer.parseInt(datos[0]));
+        if (tiempoMinimo == -1) {
+            System.out.println("No existe un camino entre A y D.");
+        } else {
+            System.out.println("Tiempo mínimo entre A y D: " + tiempoMinimo + " minutos");
         }
 
-        return mediciones;
+
+        List<SistemaTransporte.RutaConectada> red = sistema.redDeMantenimiento();
+        salida.append("Red de mantenimiento:\n");
+        System.out.println("Red de mantenimiento:");
+        for (SistemaTransporte.RutaConectada ruta : red) {
+            String linea = ruta.origen + " - " + ruta.destino + ": " + ruta.tiempo + " minutos\n";
+            salida.append(linea);
+            System.out.print(ruta.origen + " - " + ruta.destino + ": " + ruta.tiempo + " minutos\n");
+        }
+
+        // Emitir archivo de salida salida.txt
+        String nombreArchivo = "salida.txt";
+        ManejadorArchivosGenerico.escribirArchivo(nombreArchivo, salida.toString().split("\n"));
+
     }
 }

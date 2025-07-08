@@ -1,6 +1,5 @@
 package uy.edu.ucu.aed;
 
-import java.util.Collection;
 import java.util.LinkedList;
 
 /*
@@ -15,13 +14,13 @@ import java.util.LinkedList;
  */
 public interface IVertice {
 
-    TAdyacencia buscarAdyacencia(TVertice verticeDestino);
+    IAdyacencia buscarAdyacencia(IVertice verticeDestino);
 
-    TAdyacencia buscarAdyacencia(Comparable etiquetaDestino);
+    IAdyacencia buscarAdyacencia(Comparable etiquetaDestino);
 
     boolean eliminarAdyacencia(Comparable nomVerticeDestino);
 
-    LinkedList<TAdyacencia> getAdyacentes();
+    LinkedList<IAdyacencia> getAdyacentes();
 
     Object getDatos();
 
@@ -29,11 +28,11 @@ public interface IVertice {
 
     boolean getVisitado();
 
-    boolean insertarAdyacencia(Double costo, TVertice verticeDestino);
+    boolean insertarAdyacencia(Double costo, IVertice verticeDestino);
 
-    Double obtenerCostoAdyacencia(TVertice verticeDestino);
+    Double obtenerCostoAdyacencia(IVertice verticeDestino);
 
-    TVertice primerAdyacente();
+    IVertice primerAdyacente();
 
     void setVisitado(boolean valor);
 

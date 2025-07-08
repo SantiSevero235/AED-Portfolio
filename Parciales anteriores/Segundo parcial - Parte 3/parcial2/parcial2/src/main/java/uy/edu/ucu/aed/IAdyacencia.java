@@ -14,7 +14,7 @@ public interface IAdyacencia {
 
     double getCosto();
 
-    TVertice getDestino();
+    IVertice getDestino();
 
     Comparable getEtiqueta();
     
